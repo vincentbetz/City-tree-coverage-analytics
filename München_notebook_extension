@@ -1,0 +1,45 @@
+import os
+ 
+# Get the list of all files and directories
+path = "data/raw/ibk_pred-tiles"
+pred_tiles = os.listdir(path)
+ 
+print("Files and directories in '", path, "' :")
+ 
+# prints all files
+print(pred_tiles)
+
+
+%%bash
+ls -l /Users/lucie/Documents/PycharmProjects/DataAnalytics/data/munich/munich_raw/*.jpg | head
+
+# get all files in directory munich_raw
+
+import os
+ 
+# Get the list of all files and directories
+path = "data/munich/munich_raw"
+raw_tiles = os.listdir(path)
+ 
+# prints all files
+print(raw_tiles)
+
+for munich_filename in raw_tiles:
+    print(munich_filename)
+    output_dir = 'data/munich/munich_response'
+    input_dir = 'data/munich/munich_raw' 
+    munich_img_cluster = 1
+    munich_filepath = f'{input_dir}/{munich_filename}'
+    y_nonrefined = dtr.Classifier(refine=False).classify_img(munich_filepath, clf)
+    # `refine=True` by default in `Classifier`
+    c = dtr.Classifier()
+    y = c.classify_img(munich_filepath, clf)
+    with rio.open(munich_filepath) as src:
+        plot.show(src.read())
+
+    plt.imshow(y_nonrefined)
+    plt.figure()
+    plt.imshow(y)
+    picture = plt.imshow(y)
+    pred_img_filepath = f'{output_dir}/{munich_filename}'
+    pred_tile = c.classify_img(munich_filepath, clf, pred_img_filepath)

@@ -7,7 +7,8 @@ Nowadays, earth systems are altered to the needs of humankind, as our planet is 
 TEXT
 
 # Classify Pixels 
-A schematic way to classify IBK tiles. For a detailed explanation we refer to the report or to the explanations of the Jupyter notebook [Ibk_detectree.ipynb](https://git.uibk.ac.at/csaw6507/detectree/-/blob/main/Ibk_detectree.ipynb)
+A schematic way to classify IBK tiles. For a detailed explanation we refer to the report or to the explanations of the Jupyter notebook [Ibk_detectree.ipynb](https://git.uibk.ac.at/csaw6507/detectree/-/blob/main/Ibk_detectree.ipynb).
+
 To classify trees of the loaded satellite images, it is not sufficient to read out the respective pixel value, i.e.the color, to solve the binary classification problem. Instead, one must refer to a 27-dimensional feature vector [2]. The binary classification at the pixel level between tree-like and non-tree-like pixels is taken by the Detectree module with the `pixel_features.PixelFeaturesBuilder()` function. The output of the function is a matrix in which each row represents a pixel of the original RGB image, with the respective features of the pixel added as a column.
 The task of classifying tree/non-tree pixels becomes a supervised learning problem, where a classifier that maps the pixel features to the tree/non-tree responses is trained and later used to classify the values for the remaining pixels [1].
 

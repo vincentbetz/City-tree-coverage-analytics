@@ -9,16 +9,22 @@ TEXT
 # Classify Pixels 
 
 
-> Bulding the PixelFeaturesBuilder
+> Bulding the PixelFeaturesBuilder:
+
 `pfb = pixel_features.PixelFeaturesBuilder()`
+
 `X = pfb.build_features_from_filepath(img_filepath)`
 
-> classify the ibk tile
+> classify the ibk tile:
+
 `y_nonrefined = dtr.Classifier(refine=False).classify_img(ibk_img_filepath, clf)`
+
 `c = dtr.Classifier()`
+
 `y = c.classify_img(ibk_img_filepath, clf)`
 
-> open ibk classifiaction 
+> open ibk classifiaction:
+
 `with rio.open(ibk_img_filepath) as src:
     plot.show(src.read())
 

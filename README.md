@@ -8,8 +8,8 @@ TEXT
 
 # Classify Pixels 
 A schematic way to classify IBK tiles. For a detailed explanation we refer to the report or to the explanations of the Jupyter notebook [Ibk_detectree.ipynb](https://git.uibk.ac.at/csaw6507/detectree/-/blob/main/Ibk_detectree.ipynb)
-To classify trees of the loaded satellite images, it is not sufficient to read out the respective pixel value, i.e.the color, to solve the binary classification problem. Instead, one must refer to a 27-dimensional feature vector. The binary classification at the pixel level between tree-like and non-tree-like pixels is taken by the Detectree module with the `pixel_features.PixelFeaturesBuilder()` function. The output of the function is a matrix in which each row represents a pixel of the original RGB image, with the respective features of the pixel added as a column.
-The task of classifying tree/non-tree pixels becomes a supervised learning problem, where a classifier that maps the pixel features to the tree/non-tree responses is trained and later used to classify the values for the remaining pixels [2].
+To classify trees of the loaded satellite images, it is not sufficient to read out the respective pixel value, i.e.the color, to solve the binary classification problem. Instead, one must refer to a 27-dimensional feature vector [2]. The binary classification at the pixel level between tree-like and non-tree-like pixels is taken by the Detectree module with the `pixel_features.PixelFeaturesBuilder()` function. The output of the function is a matrix in which each row represents a pixel of the original RGB image, with the respective features of the pixel added as a column.
+The task of classifying tree/non-tree pixels becomes a supervised learning problem, where a classifier that maps the pixel features to the tree/non-tree responses is trained and later used to classify the values for the remaining pixels [1].
 
 > Bulding the PixelFeaturesBuilder:
 
@@ -49,7 +49,7 @@ To provide an accuracy of the algorithm, we divided the "predicted_tiles" in the
 TEXT
 
 # References
-
-1.	Yang, L., Wu, X., Praun, E., & Ma, X. (2009). Tree detection from aerial imagery. In Proceedings of the 17th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems (pp. 131-137). ACM.
-2.	Oliva, A., & Torralba, A. (2001). Modeling the shape of the scene: A holistic representation of the spatial envelope. International journal of computer vision, 42(3), 145-175.
+1. Tree detection from aerial imagery in Python, https://github.com/martibosch/detectree
+2.	Yang, L., Wu, X., Praun, E., & Ma, X. (2009). Tree detection from aerial imagery. In Proceedings of the 17th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems (pp. 131-137). ACM.
+3.	Oliva, A., & Torralba, A. (2001). Modeling the shape of the scene: A holistic representation of the spatial envelope. International journal of computer vision, 42(3), 145-175.
 

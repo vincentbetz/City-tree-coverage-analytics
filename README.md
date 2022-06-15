@@ -15,9 +15,8 @@ TEXT
 
 > classify the ibk tile
 `y_nonrefined = dtr.Classifier(refine=False).classify_img(ibk_img_filepath, clf)`
-``refine=True` by default in `Classifier`
-c = dtr.Classifier()
-y = c.classify_img(ibk_img_filepath, clf)`
+`c = dtr.Classifier()`
+`y = c.classify_img(ibk_img_filepath, clf)`
 
 > open ibk classifiaction 
 `with rio.open(ibk_img_filepath) as src:

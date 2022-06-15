@@ -9,7 +9,9 @@ TEXT
 # Classify Pixels 
 
 `# Bulding the PixelFeaturesBuilder
+
 pfb = pixel_features.PixelFeaturesBuilder()
+
 X = pfb.build_features_from_filepath(img_filepath)`
 
 `# classify the ibk tile

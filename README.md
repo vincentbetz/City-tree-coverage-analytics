@@ -26,10 +26,8 @@ TEXT
 > open ibk classifiaction:
 
 `with rio.open(ibk_img_filepath) as src:
-    plot.show(src.read())
-
-plt.imshow(y_nonrefined)
+    plot.show(src.read())`
+`plt.imshow(y_nonrefined)
 plt.figure()
 plt.imshow(y)
-picture = plt.imshow(y)
-`
+picture = plt.imshow(y)`

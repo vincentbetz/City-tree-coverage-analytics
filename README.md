@@ -7,7 +7,7 @@ Nowadays, earth systems are altered to the needs of humankind, as our planet is 
 TEXT
 
 # Classify Pixels 
-
+A schematic way to classify IBK tiles. For a detailed explanation we refer to the report or to the explanations of the Jupyter notebook [Ibk_detectree.ipynb](https://git.uibk.ac.at/csaw6507/detectree/-/blob/main/Ibk_detectree.ipynb)
 
 > Bulding the PixelFeaturesBuilder:
 

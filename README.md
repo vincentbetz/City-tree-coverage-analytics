@@ -4,7 +4,7 @@ Nowadays, earth systems are altered to the needs of humankind, as our planet is 
 
 # Download Aerial Images
 
-TEXT
+The Mapbox API allows for programmatic access of satellite data [5]. Mapbox tiles are returned as raster tiles, containing the pixel-based data stored as a grid structure in jpg format with 90% quality maximum. Although not ideal in terms of georeferencing and resolution, in this study, the Mapbox Raster Tiles API was used for further analysis. With the ['convert_coordinates.py'](https://git.uibk.ac.at/csaw6507/detectree/-/blob/main/convert_coordinates.py) programm one obtains the relevant tile depending on the latitude and longitude as well as the zoom factor. With the given geographical boundaries the tiles are downloaded with the [' mapbox_city.py'](https://git.uibk.ac.at/csaw6507/detectree/-/blob/main/mapbox_athens.py) program and stored in the folder for the raw tiles of each city.
 
 # Classify Pixels 
 A schematic way to classify IBK tiles. For a detailed explanation we refer to the report or to the explanations of the Jupyter notebook [Ibk_detectree.ipynb](https://git.uibk.ac.at/csaw6507/detectree/-/blob/main/Ibk_detectree.ipynb).
@@ -47,7 +47,7 @@ To provide an accuracy of the algorithm, we divided the "predicted_tiles" in the
 
 # Data Analysis
 
-TEXT
+Data analysis was performed using the two Jupyter notebooks [Analysis_data_lab_1.ipynb](https://git.uibk.ac.at/csaw6507/detectree/-/blob/main/Analysis_data_lab_1.ipynb) and [Analysis_data_lab_2.ipynb](https://git.uibk.ac.at/csaw6507/detectree/-/blob/main/Analysis_data_lab_2.ipynb) . Further explanations can be taken from the description.
 
 # References
 1. Tree detection from aerial imagery in Python, https://github.com/martibosch/detectree

@@ -39,6 +39,8 @@ The task of classifying tree/non-tree pixels becomes a supervised learning probl
 
 `picture = plt.imshow(y)`
 
+The "[train_classifier.py](https://git.uibk.ac.at/csaw6507/detectree/-/blob/main/train_classifier.py)" program can be used to train the classifier using predefined train and test data and a ground truth mask. The information about the train/test split ratio is contained in the split.csv table.
+
 # Analysis and validation of the predicted tiles
 
 We can determine the proportion of predicted tree-like and non-tree-like pixels of each image using our program [pixel_color.py](https://git.uibk.ac.at/csaw6507/detectree/-/blob/main/pixel-color.py). A list of the "predicted_tiles" from the corresponding directory is created and in the next step the proportion of tree-like pixels is determined. After running the classification function, the image is further refined to neglect weakly detected tree-like pixels. The tree-like pixels are then stored as white pixels, while the non-tree-like pixels are stored as black ones. Using an analysis of the colors for each pixel in the image with the `pixel_color(path1)` function, the proportion of classified pixels can be determined. 

@@ -16,10 +16,10 @@ cities_dict = { 'Tallinn': {'range_down': {'start': 18938, 'stop': 19000},
                 'Helsinki': {'range_down': {'start': 18938, 'stop': 19000},
                                  'range_side': {'start': 37287, 'stop': 37357}},
                 'Dnipro': {'range_down' : {'start': 22631, 'stop': 22676},
-                                'range_side' : {'start': 39133, 'stop': 39164}}
+                                'range_side' : {'start': 39133, 'stop': 39164}},
                 'Reykjavik' : {'range_down' : {'start': 17413, 'stop': 17427},
-                                'range__side' : {'start': 28770, 'stop': 28790}}
-                'Athens' : {'range_down' : {'start': 25278, 'stop': 25287}
+                                'range__side' : {'start': 28770, 'stop': 28790}},
+                'Athens' : {'range_down' : {'start': 25278, 'stop': 25287},
                                 'range_side' : {'start': 37083, 'stop': 37093}}
                 }
 

@@ -49,7 +49,12 @@ To provide an accuracy of the algorithm, we divided the "predicted_tiles" in the
 
 # Data Analysis
 
-Data analysis was performed using the two Jupyter notebooks [Analysis_data_lab_1.ipynb](https://git.uibk.ac.at/csaw6507/detectree/-/blob/main/Analysis_data_lab_1.ipynb) and [Analysis_data_lab_2.ipynb](https://git.uibk.ac.at/csaw6507/detectree/-/blob/main/Analysis_data_lab_2.ipynb) . Further explanations can be taken from the description.
+Data analysis was performed using the two Jupyter notebooks [Analysis_data_lab_1.ipynb](https://git.uibk.ac.at/csaw6507/detectree/-/blob/main/Analysis_data_lab_1.ipynb) and [Analysis_data_lab_2.ipynb](https://git.uibk.ac.at/csaw6507/detectree/-/blob/main/Analysis_data_lab_2.ipynb) . 
+
+In the [Analysis 1](https://git.uibk.ac.at/csaw6507/detectree/-/blob/main/Analysis_data_lab_1.ipynb) first a summary of the variables is printed out. The binary variable high_l outputs two categories: "low" for cities with tree coverage below 25%, "high" for cities with tree coverage above 25%. The variable "high_l" is presented with in its expression for all numerical variables in a boxplot and a averages table. All numeric variables are output in a scatterplot matrix. For the next steps all numerical variables are min-max normalized. A linear regression model is created and tested for fit:  `model = smf.ols("tree ~ pollution + life_quality + living_costs + PPI + satisfaction", data=df)`  
+A smaller linear regression model is created, tested for fit and plotted with regression line included: `model2 = smf.ols("pollution ~ tree", data=df)`
+For the two possible outcomes of the variable "high_l" a ttest and mannwhitney test is conducted based on the outcomes for the variable "pollution". A correlation matrix for all numeric variables is calculated. 
+
 
 # References
 1. Tree detection from aerial imagery in Python, https://github.com/martibosch/detectree
